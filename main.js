@@ -7,16 +7,8 @@
 // You may change the markup as needed.
 //
 $(document).ready(function() {
-      $('.a-button').on('click', function(){
-            $('.a-content').show();
-            $('.b-content, .c-content').hide();
-      })
-      $('.b-button').on('click', function() {
-            $('.b-content').show();
-            $('.a-content, .c-content').hide();
-      })
-      $('.c-button').on('click', function() {
-            $('.c-content').show();
-            $('.a-content, .b-content').hide();
-      })
+      $('button').click(function() {
+            $('.state-content').hide();
+            $('.' + $(this).val()).show();
+      });
 });
